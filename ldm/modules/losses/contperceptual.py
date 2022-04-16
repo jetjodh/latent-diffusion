@@ -58,7 +58,7 @@ class LPIPSWithDiscriminator(nn.Module):
         nll_loss = torch.sum(nll_loss) / nll_loss.shape[0]
         kl_loss = posteriors.kl()
         kl_loss = torch.sum(kl_loss) / kl_loss.shape[0]
-
+        print("contperceptual.py")
         # now the GAN part
         if optimizer_idx == 0:
             # generator update
